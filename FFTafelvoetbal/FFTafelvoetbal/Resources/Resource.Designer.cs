@@ -41,11 +41,27 @@ namespace FFTafelvoetbal
 			}
 		}
 		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int theme_devicedefault_background = 2131034112;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
+			{
+			}
+		}
+		
 		public partial class Drawable
 		{
 			
-			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			// aapt resource value: 0x7f020002
+			public const int Icon = 2130837506;
 			
 			static Drawable()
 			{
@@ -57,11 +73,42 @@ namespace FFTafelvoetbal
 			}
 		}
 		
+		public partial class Id
+		{
+			
+			// aapt resource value: 0x7f070001
+			public const int addPlayerButton = 2131165185;
+			
+			// aapt resource value: 0x7f070002
+			public const int fragmentContainer = 2131165186;
+			
+			// aapt resource value: 0x7f070000
+			public const int playerName = 2131165184;
+			
+			// aapt resource value: 0x7f070003
+			public const int textView1 = 2131165187;
+			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Id()
+			{
+			}
+		}
+		
 		public partial class Layout
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int AddPlayerTab = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Main = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int PlayerListTab = 2130903042;
 			
 			static Layout()
 			{
@@ -88,6 +135,22 @@ namespace FFTafelvoetbal
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int Theme_Custom = 2131099648;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

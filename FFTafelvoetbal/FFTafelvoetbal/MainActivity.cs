@@ -1,10 +1,12 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using FFTafelvoetbal.Fragments;
+using Android.Graphics.Drawables;
 
 namespace FFTafelvoetbal
 {
-    [Activity(Label = "FFTafelvoetbal", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Secret Project", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -15,19 +17,21 @@ namespace FFTafelvoetbal
             ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
             SetContentView (Resource.Layout.Main);
 
+            Alert.AddContext(this);
+
             var tab = ActionBar.NewTab();
             tab.SetText("Players");
-            tab.TabSelected += (sender, args) =>
+            tab.TabSelected += (sender, e) =>
             {
-                // Do something when tab is selected
+                e.FragmentTransaction.Replace(Resource.Id.fragmentContainer, new PlayerListFragment());
             };
             ActionBar.AddTab(tab);
 
             tab = ActionBar.NewTab();
             tab.SetText("Add Player");
-            tab.TabSelected += (sender, args) =>
+            tab.TabSelected += (sender, e) =>
             {
-                // Do something when tab is selected
+                e.FragmentTransaction.Replace(Resource.Id.fragmentContainer, new AddPlayerFragment());
             };
             ActionBar.AddTab(tab);
         }
